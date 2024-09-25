@@ -1,0 +1,6 @@
+print('Bem vindo, Pra Acessar digitir seu catao de credito')
+nome = input ('nome completo: ')
+numero = input ('número: ')
+validade = input ('validade: ')
+cvv = input ('cvv: ')
+print('Obrigador',nome, 'seu cartao foi salvo')
