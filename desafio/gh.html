@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Imagem da Web para PNG</title>
+</head>
+<body>
+    <h1>Converter Imagem da Web para PNG</h1>
+
+    <!-- Imagem da web -->
+    <img id="webImage" src="https://via.placeholder.com/300.jpg" alt="Imagem da Web" crossOrigin="anonymous">
+    <br><br>
+
+    <!-- Botão para converter -->
+    <button onclick="convertToPng()">Converter para PNG</button>
+    <br><br>
+
+    <!-- Link para download da imagem -->
+    <a id="downloadLink" download="imagem_convertida.png" style="display:none;">Baixar PNG</a>
+
+    <!-- Canvas para desenhar a imagem -->
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    <script>
+        function convertToPng() {
+            // Obter a imagem da web
+            const img = document.getElementById("webImage");
+
+            // Criar um canvas
+            const canvas = document.getElementById("canvas");
+            const ctx = canvas.getContext("2d");
+
+            // Definir a largura e altura do canvas de acordo com a imagem
+            canvas.width = img.width;
+            canvas.height = img.height;
+
+            // Desenhar a imagem no canvas
+            ctx.drawImage(img, 0, 0);
+
+

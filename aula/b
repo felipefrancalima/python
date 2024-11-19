@@ -1,0 +1,113 @@
+script em Python que automatiza uma tarefa complexa, util 
+
+Script: (link unavailable)
+
+
+"""
+Automatizador de Tarefas
+
+Este script automatiza a realização de tarefas no computador.
+
+Autor: [Seu Nome]
+Data: [Data de Criação]
+Versão: 1.0
+"""
+
+import pyautogui
+import time
+import random
+import logging
+
+# Configurações
+CONFIG = {
+    'tempo_espera': 5,  # tempo de espera em segundos
+    'navegador': 'Google Chrome',  # nome do navegador
+    'site': '(link unavailable)',  # endereço do site
+    'pesquisa': 'Python',  # termo de pesquisa
+}
+
+# Funções
+def abrir_navegador():
+    """
+    Abre o navegador.
+
+    Returns:
+        None
+    """
+    pyautogui.press('win')
+    pyautogui.typewrite(CONFIG['navegador'])
+    pyautogui.press('enter')
+
+def acessar_site():
+    """
+    Acessa o site.
+
+    Returns:
+        None
+    """
+    pyautogui.typewrite(CONFIG['site'])
+    pyautogui.press('enter')
+
+def pesquisar():
+    """
+    Realiza uma pesquisa.
+
+    Returns:
+        None
+    """
+    pyautogui.moveTo(400, 200)
+    pyautogui.click()
+    pyautogui.typewrite(CONFIG['pesquisa'])
+    pyautogui.press('enter')
+
+def fechar_navegador():
+    """
+    Fecha o navegador.
+
+    Returns:
+        None
+    """
+    pyautogui.hotkey('ctrl', 'w')
+
+def main():
+    """
+    Função principal.
+
+    Returns:
+        None
+    """
+    logging.info('Iniciando automatizador...')
+    time.sleep(CONFIG['tempo_espera'])
+
+    abrir_navegador()
+    logging.info('Navegador aberto.')
+
+    acessar_site()
+    logging.info('Site acessado.')
+
+    pesquisar()
+    logging.info('Pesquisa realizada.')
+
+    fechar_navegador()
+    logging.info('Navegador fechado.')
+
+    logging.info('Automatizador finalizado.')
+
+if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+    main()
+
+
+Explicação:
+
+1. O script começa com uma docstring que descreve o propósito do script.
+2. As configurações são definidas em um dicionário CONFIG.
+3. As funções são definidas com docstrings que descrevem seu propósito.
+4. A função main é a função principal que executa as tarefas.
+5. O script utiliza o módulo logging para registrar eventos.
+
+Observações:
+
+- Certifique-se de ter a biblioteca pyautogui instalada.
+- Ajuste os tempos de espera e as coordenadas do mouse conforme necessário.
+- Este é um exemplo mais detalhado e profissional; você pode expandir para automatizar tarefas mais complexas.
